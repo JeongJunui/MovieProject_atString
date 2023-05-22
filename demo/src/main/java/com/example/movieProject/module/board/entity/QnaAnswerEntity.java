@@ -1,4 +1,4 @@
-package com.example.movieProject.board;
+package com.example.movieProject.module.board.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,14 +11,12 @@ import java.sql.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class BoardDTO {
-    private Integer boardIdx;
+public class QnaAnswerEntity {
+    private Integer answerIdx;
+    private Integer qnaIdx;
     private String userId;
-    private String category;
     private String title;
     private String detail;
-    private Integer movieIdx;
-    private Integer liked;
     private Date postedDate;
     private String filename;
     private Integer filesize;

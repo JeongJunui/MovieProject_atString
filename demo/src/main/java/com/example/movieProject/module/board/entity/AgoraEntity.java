@@ -1,4 +1,4 @@
-package com.example.movieProject.board;
+package com.example.movieProject.module.board.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import java.sql.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AgoraDTO {
+public class AgoraEntity {
     private Integer agoraIdx;
     private String userId;
     private int movieIdx;

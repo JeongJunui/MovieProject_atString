@@ -1,4 +1,4 @@
-package com.example.movieProject.board;
+package com.example.movieProject.module.board.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,10 +11,9 @@ import java.sql.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class BoardCommentDTO {
-    private Integer cidx;
+public class BoardLikeEntity {
+    private Integer likeIdx;
     private Integer boardIdx;
     private String userId;
-    private String detail;
-    private Date postedDate;
+    private Date likedDate;
 }
