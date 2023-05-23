@@ -6,6 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+
+import java.sql.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class BoardDTO {
 
@@ -40,6 +46,48 @@ public class BoardDTO {
                     .filename(filename)
                     .filesize(filesize)
                     .build();
+        }
+    }
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ResBasic {
+        private List<Board> boardList;
+        @Data
+        @Builder
+        @NoArgsConstructor
+        @AllArgsConstructor
+        static class Board {
+            Integer boardIdx;
+            String userId;
+            String category;
+            String title;
+            String detail;
+            Integer movieIdx;
+            Integer liked;
+            Date postedDate;
+            String filename;
+            Integer filesize;
+        }
+
+        public static ResBasic fromEntityList(List<BoardEntity> boardEntityList) {
+            List<Board> boardList = boardEntityList.stream().map(boardEntity -> {
+                return Board.builder()
+                        .boardIdx(boardEntity.getBoardIdx())
+                        .userId(boardEntity.getUserId())
+                        .category(boardEntity.getCategory())
+                        .title(boardEntity.getTitle())
+                        .detail(boardEntity.getDetail())
+                        .movieIdx(boardEntity.getMovieIdx())
+                        .liked(boardEntity.getLiked())
+                        .postedDate(boardEntity.getPostedDate())
+                        .filename(boardEntity.getFilename())
+                        .filesize(boardEntity.getFilesize())
+                        .build();
+            }).collect(Collectors.toList());
+
+            return new ResBasic(boardList);
         }
     }
 }

@@ -14,7 +14,7 @@ import java.sql.Date;
 public class AgoraEntity {
     private Integer agoraIdx;
     private String userId;
-    private int movieIdx;
+    private Integer movieIdx;
     private String agoraTitle;
     private String agoraDetail;
     private Date postedDate;
