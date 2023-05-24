@@ -1,19 +1,17 @@
 package com.example.movieProject.module.board.dto;
 
-import com.example.movieProject.module.board.entity.BoardEntity;
+import com.example.movieProject.module.board.entity.QnaEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
-
 import java.sql.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-public class BoardDTO {
+public class QnaDTO {
 
     @Data
     @Builder
@@ -27,20 +25,18 @@ public class BoardDTO {
         @NotBlank(message = "내용을 입력하시오")
         private String detail;
 
-        private Integer movieIdx;
+        private boolean isSecret;
 
         private String filename;
         private Integer filesize;
 
-        public BoardEntity toEntity(String userId)
+        public QnaEntity toEntity(String userId)
         {
-            return BoardEntity.builder()
+            return QnaEntity.builder()
                     .userId(userId)
-                    .category(category)
                     .title(title)
                     .detail(detail)
-                    .movieIdx(movieIdx)
-                    .liked(0)
+                    .isSecret(isSecret)
                     .filename(filename)
                     .filesize(filesize)
                     .build();
@@ -51,41 +47,37 @@ public class BoardDTO {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class ResBasic {
-        private List<Board> boardList;
+        private List<Qna> qnaList;
         @Data
         @Builder
         @NoArgsConstructor
         @AllArgsConstructor
-        static class Board {
-            Integer boardIdx;
+        static class Qna {
+            Integer qnaIdx;
             String userId;
-            String category;
             String title;
             String detail;
-            Integer movieIdx;
-            Integer liked;
             Date postedDate;
+            boolean isSecret;
             String filename;
             Integer filesize;
         }
 
-        public static ResBasic fromEntityList(List<BoardEntity> boardEntityList) {
-            List<Board> boardList = boardEntityList.stream().map(boardEntity -> {
-                return Board.builder()
-                        .boardIdx(boardEntity.getBoardIdx())
-                        .userId(boardEntity.getUserId())
-                        .category(boardEntity.getCategory())
-                        .title(boardEntity.getTitle())
-                        .detail(boardEntity.getDetail())
-                        .movieIdx(boardEntity.getMovieIdx())
-                        .liked(boardEntity.getLiked())
-                        .postedDate(boardEntity.getPostedDate())
-                        .filename(boardEntity.getFilename())
-                        .filesize(boardEntity.getFilesize())
+        public static ResBasic fromEntityList(List<QnaEntity> qnaEntityList) {
+            List<Qna> qnaList = qnaEntityList.stream().map(qnaEntity -> {
+                return Qna.builder()
+                        .qnaIdx(qnaEntity.getQnaIdx())
+                        .userId(qnaEntity.getUserId())
+                        .title(qnaEntity.getTitle())
+                        .detail(qnaEntity.getDetail())
+                        .postedDate(qnaEntity.getPostedDate())
+                        .isSecret(qnaEntity.)
+                        .filename(qnaEntity.getFilename())
+                        .filesize(qnaEntity.getFilesize())
                         .build();
             }).collect(Collectors.toList());
 
-            return new ResBasic(boardList);
+            return new ResBasic(qnaList);
         }
     }
 }

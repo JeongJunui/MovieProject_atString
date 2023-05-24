@@ -20,4 +20,8 @@ public class AgoraEntity {
     private Date postedDate;
     private String filename;
     private Integer filesize;
+    public void setAgoraTitle(String title) { this.agoraTitle=title; }
+    public void setAgoraDetail(String detail) { this.agoraDetail=detail; }
+    public void setFilename(String filename) { this.filename=filename; }
+    public void setFilesize(Integer filesize) { this.filesize=filesize; }
 }

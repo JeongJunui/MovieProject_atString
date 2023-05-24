@@ -17,4 +17,5 @@ public class BoardCommentEntity {
     private String userId;
     private String detail;
     private Date postedDate;
+    public void setDetail(String detail) { this.detail=detail; }
 }

@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 
 public class BoardCommentDTO {
 
-
     @Data
     @Builder
     @NoArgsConstructor

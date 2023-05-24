@@ -23,6 +23,9 @@ public class BoardEntity {
     private String filename;
     private Integer filesize;
 
+    public void setCategory(String category) { this.category=category; }
+    public void setTitle(String title) { this.title=title; }
+    public void setDetail(String detail) { this.detail=detail; }
     public void setLiked(Integer liked) { this.liked=liked; }
     public void setFilename(String filename) { this.filename=filename; }
     public void setFilesize(Integer filesize) { this.filesize=filesize; }
