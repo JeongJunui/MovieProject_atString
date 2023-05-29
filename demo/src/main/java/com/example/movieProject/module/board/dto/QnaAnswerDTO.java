@@ -1,6 +1,6 @@
 package com.example.movieProject.module.board.dto;
 
-import com.example.movieProject.module.board.entity.QnaEntity;
+import com.example.movieProject.module.board.entity.QnaAnswerEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,32 +11,30 @@ import java.sql.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class QnaDTO {
-
+public class QnaAnswerDTO {
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
     public static class ReqBasic {
 
+        private Integer qnaIdx;
         @NotBlank(message = "제목을 입력하시오")
         private String title;
 
         @NotBlank(message = "내용을 입력하시오")
         private String detail;
 
-        private boolean isSecret;
-
         private String filename;
         private Integer filesize;
 
-        public QnaEntity toEntity(String userId)
+        public QnaAnswerEntity toEntity(String userId)
         {
-            return QnaEntity.builder()
+            return QnaAnswerEntity.builder()
+                    .qnaIdx(qnaIdx)
                     .userId(userId)
                     .title(title)
                     .detail(detail)
-                    .isSecret(isSecret)
                     .filename(filename)
                     .filesize(filesize)
                     .build();
@@ -47,37 +45,37 @@ public class QnaDTO {
     @NoArgsConstructor
     @AllArgsConstructor
     public static class ResBasic {
-        private List<Qna> qnaList;
+        private List<QnaAnswer> qnaAnswerList;
         @Data
         @Builder
         @NoArgsConstructor
         @AllArgsConstructor
-        static class Qna {
+        static class QnaAnswer {
+            Integer answerIdx;
             Integer qnaIdx;
             String userId;
             String title;
             String detail;
             Date postedDate;
-            boolean isSecret;
             String filename;
             Integer filesize;
         }
 
-        public static ResBasic fromEntityList(List<QnaEntity> qnaEntityList) {
-            List<Qna> qnaList = qnaEntityList.stream().map(qnaEntity -> {
-                return Qna.builder()
-                        .qnaIdx(qnaEntity.getQnaIdx())
-                        .userId(qnaEntity.getUserId())
-                        .title(qnaEntity.getTitle())
-                        .detail(qnaEntity.getDetail())
-                        .postedDate(qnaEntity.getPostedDate())
-                        .isSecret(qnaEntity.isSecret())
-                        .filename(qnaEntity.getFilename())
-                        .filesize(qnaEntity.getFilesize())
+        public static ResBasic fromEntityList(List<QnaAnswerEntity> qnaAnswerEntityList) {
+            List<QnaAnswer> qnaAnswerList = qnaAnswerEntityList.stream().map(qnaAnswerEntity -> {
+                return QnaAnswer.builder()
+                        .answerIdx(qnaAnswerEntity.getAnswerIdx())
+                        .qnaIdx(qnaAnswerEntity.getQnaIdx())
+                        .userId(qnaAnswerEntity.getUserId())
+                        .title(qnaAnswerEntity.getTitle())
+                        .detail(qnaAnswerEntity.getDetail())
+                        .postedDate(qnaAnswerEntity.getPostedDate())
+                        .filename(qnaAnswerEntity.getFilename())
+                        .filesize(qnaAnswerEntity.getFilesize())
                         .build();
             }).collect(Collectors.toList());
 
-            return new ResBasic(qnaList);
+            return new ResBasic(qnaAnswerList);
         }
     }
 }
