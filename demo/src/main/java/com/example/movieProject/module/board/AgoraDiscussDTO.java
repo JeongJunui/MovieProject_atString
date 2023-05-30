@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+//@Data
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class AgoraDiscussDTO {
 }
