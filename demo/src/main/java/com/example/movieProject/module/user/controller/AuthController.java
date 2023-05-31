@@ -1,4 +1,4 @@
-package com.example.movieProject.user.controller;
+package com.example.movieProject.module.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -13,4 +13,9 @@ public class AuthController {
     public String getLoginPage() {
         return "user/login";
     }
+    @GetMapping("/join")
+    public String getJoinPage() {
+        return "user/memberjoin";
+    }
+
 }

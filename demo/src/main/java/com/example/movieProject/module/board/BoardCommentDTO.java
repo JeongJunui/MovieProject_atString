@@ -1,4 +1,4 @@
-package com.example.movieProject.board;
+package com.example.movieProject.module.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
