@@ -7,6 +7,7 @@ import com.example.movieProject.module.board.repository.BoardRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,8 +26,14 @@ public class BoardService {
                 ResDTO.builder()
                         .code(0)
                         .message("검색완료")
-                        .data(BoardDTO.)
-        )
+                        .data(BoardDTO.ResBasic.fromEntityList(boardList))
+                        .build(),
+                HttpStatus.OK
+        );
+    }
+    public HttpEntity<?> getBoardByIdx(Integer boardIdx)
+    {
+        BoardEntity boardEntity
     }
 
 }
