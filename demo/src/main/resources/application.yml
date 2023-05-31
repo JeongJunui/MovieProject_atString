@@ -1,10 +1,54 @@
+<<<<<<< HEAD
 
 
 spring:
+=======
+server:
+  port: 6060
+
+# JSP 경로 설정
+spring:
+  security:
+    user:
+      name: test
+      password: 123
+>>>>>>> 0b361bf7f6446238e5bfe82dd3a4894702cb5a7c
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+<<<<<<< HEAD
 server:
   port: 8070
 
+=======
+  datasource:
+    url: jdbc:postgresql://db.glmsqjbydjixooglxsyl.supabase.co:5432/postgres;
+    # driver-class-name: org.h2.Driver
+    username: postgres
+    password: coSlwouXMLIjs3w6
+
+mybatis:
+  mapper-locations: classpath:mapper/*_mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+springdoc:
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    operations-sorter: method
+
+# 로그 관련 설정
+logging:
+  file:
+    # / 를 붙이면 C드라이브 하위 폴더 생성됨
+    # / 를 안 붙이면 프로젝트 내부에 폴더 생성됨
+    name: log/todo.log
+    # 로그를 남길 데이터의 위험도
+    # TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+  level:
+    root: warn
+  charset:
+    file: UTF-8
+>>>>>>> 0b361bf7f6446238e5bfe82dd3a4894702cb5a7c
