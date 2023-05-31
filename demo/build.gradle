@@ -21,9 +21,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//mybatis 추가
-	implementation 'org.mybatis:mybatis-spring:3.0.2'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
 
-	implementation 'org.apache.maven.'
+	//implementation 'org.apache.maven.'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -32,6 +32,9 @@ dependencies {
 	// 밸리데이션
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	// https://mvnrepository.com/artifact/org.postgresql/postgresql
+	implementation 'org.postgresql:postgresql:42.6.0'
+
 
 }
 
