@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-spring:
-=======
 server:
   port: 6060
 
@@ -12,16 +7,11 @@ spring:
     user:
       name: test
       password: 123
->>>>>>> 0b361bf7f6446238e5bfe82dd3a4894702cb5a7c
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-<<<<<<< HEAD
-server:
-  port: 8070
 
-=======
   datasource:
     url: jdbc:postgresql://db.glmsqjbydjixooglxsyl.supabase.co:5432/postgres;
     # driver-class-name: org.h2.Driver
@@ -51,4 +41,3 @@ logging:
     root: warn
   charset:
     file: UTF-8
->>>>>>> 0b361bf7f6446238e5bfe82dd3a4894702cb5a7c

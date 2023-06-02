@@ -79,5 +79,19 @@ public class AgoraDTO {
 
             return new ResBasic(agoraList);
         }
+        public static ResBasic fromAEntity(AgoraEntity agoraEntity)
+        {
+            return new ResBasic((List<Agora>) Agora.builder()
+                    .agoraIdx(agoraEntity.getAgoraIdx())
+                    .userId(agoraEntity.getUserId())
+                    .movieIdx(agoraEntity.getMovieIdx())
+                    .agoraTitle(agoraEntity.getAgoraTitle())
+                    .agoraDetail(agoraEntity.getAgoraDetail())
+                    .postedDate(agoraEntity.getPostedDate())
+                    .filename(agoraEntity.getFilename())
+                    .filesize(agoraEntity.getFilesize())
+                    .build());
+        }
+
     }
 }

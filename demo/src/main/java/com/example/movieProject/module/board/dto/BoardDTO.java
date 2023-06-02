@@ -87,5 +87,20 @@ public class BoardDTO {
 
             return new ResBasic(boardList);
         }
+        public static ResBasic fromAEntity(BoardEntity boardEntity)
+        {
+            return new ResBasic((List<Board>) Board.builder()
+                    .boardIdx(boardEntity.getBoardIdx())
+                    .userId(boardEntity.getUserId())
+                    .category(boardEntity.getCategory())
+                    .title(boardEntity.getTitle())
+                    .detail(boardEntity.getDetail())
+                    .movieIdx(boardEntity.getMovieIdx())
+                    .liked(boardEntity.getLiked())
+                    .postedDate(boardEntity.getPostedDate())
+                    .filename(boardEntity.getFilename())
+                    .filesize(boardEntity.getFilesize())
+                    .build());
+        }
     }
 }

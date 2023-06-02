@@ -29,7 +29,6 @@ dependencies {
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-<<<<<<< HEAD
 //	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
 	// 시큐리티
 	implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -37,13 +36,11 @@ dependencies {
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	implementation 'javax.servlet:jstl'
 
-=======
 	// 밸리데이션
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	// https://mvnrepository.com/artifact/org.postgresql/postgresql
 	implementation 'org.postgresql:postgresql:42.6.0'
->>>>>>> 0b361bf7f6446238e5bfe82dd3a4894702cb5a7c
 
 
 }

@@ -17,6 +17,7 @@ public interface AgoraRepository {
     Integer createAgora(AgoraEntity entity);
     Integer deleteAgora(Integer agoraIdx);
     List<AgoraDiscussEntity> getDiscuss(Integer agoraIdx);
+    AgoraDiscussEntity getADiscuss(Integer discussIdx);
     Integer getDiscussCount(Integer agoraIdx);
     Integer insertDiscuss(AgoraDiscussEntity entity);
     Integer deleteDiscuss(Integer discussIdx);

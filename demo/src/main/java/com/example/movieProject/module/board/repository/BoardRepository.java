@@ -13,12 +13,14 @@ import java.util.List;
 public interface BoardRepository {
 
     BoardEntity getBoardByIdx(Integer boardIdx);
+    List<BoardEntity> getBoardByIdxL(Integer boardIdx);
     List<BoardEntity> findBoard(String category, String keyField, String keyWord, Integer movieIdx);
     List<BoardEntity> findByUserId(@Param("userId") String userId);
     Integer insert(BoardEntity entity);
     Integer update(BoardEntity entity);
     Integer delete(Integer boardIdx);
     List<BoardCommentEntity> findComment(Integer boardIdx);
+    BoardCommentEntity getComment(Integer commentIdx);
     Integer getCommentCount(Integer boardIdx);
     Integer insertComment(BoardCommentEntity entity);
     Integer deleteComment(Integer commentIdx);

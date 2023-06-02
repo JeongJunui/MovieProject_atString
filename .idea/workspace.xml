@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d56481c5-1af4-4d79-898b-e771e619fb31" name="변경" comment="" />
+    <list default="true" id="d56481c5-1af4-4d79-898b-e771e619fb31" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/demo/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/AgoraDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/AgoraDiscussDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/BoardCommentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/BoardDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/BoardLikeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/dto/AgoraDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/dto/AgoraDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/dto/BoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/dto/BoardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/movieProject/module/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +39,34 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Jsp/Jsp_Spring-workspace/movieProject"
+    "last_opened_file_path": "C:/Jsp/Jsp_Spring-workspace/MovieProject_atString/demo/gradle",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="C:/Jsp/Jsp_Spring-workspace/MovieProject_atString/demo/gradle" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/demo/gradle" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
