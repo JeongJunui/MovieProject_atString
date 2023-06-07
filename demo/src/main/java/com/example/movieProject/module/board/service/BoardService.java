@@ -2,6 +2,7 @@ package com.example.movieProject.module.board.service;
 
 import com.example.movieProject.common.ResDTO;
 import com.example.movieProject.config.security.CustomUserDetails;
+import com.example.movieProject.module.board.dto.BoardCommentDTO;
 import com.example.movieProject.module.board.dto.BoardDTO;
 import com.example.movieProject.module.board.entity.BoardEntity;
 import com.example.movieProject.module.board.repository.BoardRepository;
